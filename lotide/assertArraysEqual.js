@@ -8,14 +8,18 @@ const eqArrays = function (arrayA, arrayB) {
   return checker;
 }
 
-const assertArraysEqual = function (arrayA,arrayB) {
-  console.log(eqArrays(arrayA,arrayB));
+const assertArraysEqual = function (arrayA, arrayB) {
+  if (eqArrays(arrayA, arrayB)) {
+    console.log('😀😀😀 Assertion Passed:',arrayA,'===',arrayB);
+  } else {
+    console.log('🥵🥵🥵 Assertion Failed:',arrayA,'!==',arrayB);
+  }
 }
 
-assertArraysEqual(['hi','bye'], ['hi','bye']);
+assertArraysEqual(['hi', 'bye'], ['hi', 'bye']);
 assertArraysEqual([null], [null]);
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
 
 assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
 assertArraysEqual([null], ["null"]);
-assertArraysEqual([1,2,3], [4,5,6]);
+assertArraysEqual([1, 2, 3], [4, 5, 6]);
