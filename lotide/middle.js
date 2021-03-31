@@ -26,10 +26,10 @@ const middle = function(array) {
   }
   if (array.length % 2 === 0) {
     middleArray.push(array[array.length/2 -1],array[array.length/2]);
-    console.log('even',middleArray)
+    // console.log('even',middleArray)
   } else {
     middleArray.push(array[Math.floor(array.length/2)]);
-    console.log('odd',middleArray)
+    // console.log('odd',middleArray)
   }
   return middleArray;
 }
