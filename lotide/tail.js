@@ -5,5 +5,6 @@ const tail = function(array) {
   }
   return newArray;
 }
+console.log(tail(["Yo Yo", "Lighthouse", "Labs"]))
 
 module.exports = tail;
