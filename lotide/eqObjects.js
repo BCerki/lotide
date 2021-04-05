@@ -33,16 +33,16 @@ const eqObjects = function (object1, object2) {
   //you're working with the arrays of object keys now
   for (let elementKey of object1Keys) {
 
-    //if the key value is another object, use recursion
-    if (typeof object1[elementKey] === 'object' && !Array.isArray(object1) && typeof object2[elementKey] === 'object' && !Array.isArray(object2)) {
+    //if the key value is another object, use recursion--haven't successfully completely this stretch yet
+    /*if (typeof object1[elementKey] === 'object' && !Array.isArray(object1) && typeof object2[elementKey] === 'object' && !Array.isArray(object2)) {
       console.log('if picked up that key value is an object');
       for (let key in object1[elementKey]) {
         eqObjects(object1[elementKey][key], object2[elementKey][key])
       }
-    }
+    }*/
 
     //if the key value is an array, use a function to check for array match
-    else if (Array.isArray(object1[elementKey]) && Array.isArray(object2[elementKey])) {
+    if (Array.isArray(object1[elementKey]) && Array.isArray(object2[elementKey])) {
       if (!(eqArrays(object1[elementKey], object2[elementKey]))) {
         return false;
       }
